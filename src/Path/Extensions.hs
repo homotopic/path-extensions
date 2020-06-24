@@ -3,99 +3,99 @@ module Path.Extensions where
 import Control.Monad.Catch
 import Path
 
-c_extension    = ".c"
-cpp_extension  = ".cpp"
-css_extension  = ".css"
-gif_extension  = ".gif"
-hs_extension   = ".hs"
-html_extension = ".html"
-jpg_extension  = ".jpg"
-js_extension   = ".js"
-md_extension   = ".md"
-mp4_extension  = ".mp4"
-o_extension    = ".o"
-pdf_extension  = ".pdf"
-php_extension  = ".php"
-png_extension  = ".png"
-xml_extension  = ".xml"
+cExtension    = ".c"
+cppExtension  = ".cpp"
+cssExtension  = ".css"
+gifExtension  = ".gif"
+hsExtension   = ".hs"
+htmlExtension = ".html"
+jpgExtension  = ".jpg"
+jsExtension   = ".js"
+mdExtension   = ".md"
+mp4Extension  = ".mp4"
+oExtension    = ".o"
+pdfExtension  = ".pdf"
+phpExtension  = ".php"
+pngExtension  = ".png"
+xmlExtension  = ".xml"
 
 addCExtension :: MonadThrow m => Path b File -> m (Path b File)
-addCExtension = addExtension c_extension
+addCExtension = addExtension cExtension
 
 addCppExtension :: MonadThrow m => Path b File -> m (Path b File)
-addCppExtension = addExtension cpp_extension
+addCppExtension = addExtension cppExtension
 
 addCssExtension :: MonadThrow m => Path b File -> m (Path b File)
-addCssExtension = addExtension css_extension
+addCssExtension = addExtension cssExtension
 
 addGifExtension :: MonadThrow m => Path b File -> m (Path b File)
-addGifExtension = addExtension c_extension
+addGifExtension = addExtension cExtension
 
 addHsExtension :: MonadThrow m => Path b File -> m (Path b File)
-addHsExtension  = addExtension gif_extension
+addHsExtension  = addExtension gifExtension
 
 addHtmlExtension :: MonadThrow m => Path b File -> m (Path b File)
-addHtmlExtension = addExtension html_extension
+addHtmlExtension = addExtension htmlExtension
 
 addJpgExtension :: MonadThrow m => Path b File -> m (Path b File)
-addJpgExtension = addExtension jpg_extension
+addJpgExtension = addExtension jpgExtension
 
 addMdExtension :: MonadThrow m => Path b File -> m (Path b File)
-addMdExtension  = addExtension md_extension
+addMdExtension  = addExtension mdExtension
 
 addMp4Extension :: MonadThrow m => Path b File -> m (Path b File)
-addMp4Extension = addExtension mp4_extension
+addMp4Extension = addExtension mp4Extension
 
 addOExtension :: MonadThrow m => Path b File -> m (Path b File)
-addOExtension = addExtension o_extension
+addOExtension = addExtension oExtension
 
 addPdfExtension :: MonadThrow m => Path b File -> m (Path b File)
-addPdfExtension = addExtension pdf_extension
+addPdfExtension = addExtension pdfExtension
 
 addPhpExtension :: MonadThrow m => Path b File -> m (Path b File)
-addPhpExtension = addExtension php_extension
+addPhpExtension = addExtension phpExtension
 
 addPngExtension :: MonadThrow m => Path b File -> m (Path b File)
-addPngExtension = addExtension png_extension
+addPngExtension = addExtension pngExtension
 
 addXmlExtension :: MonadThrow m => Path b File -> m (Path b File)
-addXmlExtension = addExtension xml_extension
+addXmlExtension = addExtension xmlExtension
 
 withCExtension :: MonadThrow m => Path b File -> m (Path b File)
-withCExtension = replaceExtension c_extension
+withCExtension = replaceExtension cExtension
 
 withCppExtension :: MonadThrow m => Path b File -> m (Path b File)
-withCppExtension = replaceExtension cpp_extension
+withCppExtension = replaceExtension cppExtension
 
 withCssExtension :: MonadThrow m => Path b File -> m (Path b File)
-withCssExtension = replaceExtension css_extension
+withCssExtension = replaceExtension cssExtension
 
 withGifExtension :: MonadThrow m => Path b File -> m (Path b File)
-withGifExtension = replaceExtension gif_extension
+withGifExtension = replaceExtension gifExtension
 
 withHsExtension :: MonadThrow m => Path b File -> m (Path b File)
-withHsExtension = replaceExtension hs_extension
+withHsExtension = replaceExtension hsExtension
 
 withHtmlExtension :: MonadThrow m => Path b File -> m (Path b File)
-withHtmlExtension = replaceExtension html_extension
+withHtmlExtension = replaceExtension htmlExtension
 
 withJpgExtension :: MonadThrow m => Path b File -> m (Path b File)
-withJpgExtension = replaceExtension jpg_extension
+withJpgExtension = replaceExtension jpgExtension
 
 withMdExtension :: MonadThrow m => Path b File -> m (Path b File)
-withMdExtension = replaceExtension md_extension
+withMdExtension = replaceExtension mdExtension
 
 withMp4Extension :: MonadThrow m => Path b File -> m (Path b File)
-withMp4Extension = replaceExtension mp4_extension
+withMp4Extension = replaceExtension mp4Extension
 
 withPdfExtension :: MonadThrow m => Path b File -> m (Path b File)
-withPdfExtension = replaceExtension pdf_extension
+withPdfExtension = replaceExtension pdfExtension
 
 withPhpExtension :: MonadThrow m => Path b File -> m (Path b File)
-withPhpExtension = replaceExtension php_extension
+withPhpExtension = replaceExtension phpExtension
 
 withPngExtension :: MonadThrow m => Path b File -> m (Path b File)
-withPngExtension = replaceExtension png_extension
+withPngExtension = replaceExtension pngExtension
 
 withXmlExtension :: MonadThrow m => Path b File -> m (Path b File)
-withXmlExtension = replaceExtension xml_extension
+withXmlExtension = replaceExtension xmlExtension
