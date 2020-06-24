@@ -60,9 +60,9 @@ module Path.Extensions (
 , withXmlExtension
 ) where
 
-import Control.Monad.Catch
-import Data.Text
-import Path
+import           Control.Monad.Catch
+import           Data.Text
+import           Path
 
 -- | The string ".c".
 cExtension :: String
