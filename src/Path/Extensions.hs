@@ -14,6 +14,7 @@ module Path.Extensions (
 , pdfExtension
 , phpExtension
 , pngExtension
+, svgExtension
 , xmlExtension
 
   -- * Add Extensions
@@ -31,6 +32,7 @@ module Path.Extensions (
 , addPdfExtension
 , addPhpExtension
 , addPngExtension
+, addSvgExtension
 , addXmlExtension
 
   -- * Replace Extensions
@@ -48,6 +50,7 @@ module Path.Extensions (
 , withPdfExtension
 , withPhpExtension
 , withPngExtension
+, withSvgExtension
 , withXmlExtension
 ) where
 
@@ -115,6 +118,10 @@ phpExtension  = ".php"
 pngExtension :: String
 pngExtension  = ".png"
 
+-- | The string ".svg"
+svgExtension :: String
+svgExtension = ".svg"
+
 -- | The string ".xml".
 xmlExtension :: String
 xmlExtension  = ".xml"
@@ -151,7 +158,7 @@ addJpgExtension = addExtension jpgExtension
 addMdExtension :: MonadThrow m => Path b File -> m (Path b File)
 addMdExtension  = addExtension mdExtension
 
--- | Add a ".mp4" extension to the end of a `File`.
+-- | Add a ".mp3" extension to the end of a `File`.
 addMp3Extension :: MonadThrow m => Path b File -> m (Path b File)
 addMp3Extension = addExtension mp3Extension
 
@@ -174,6 +181,10 @@ addPhpExtension = addExtension phpExtension
 -- | Add a ".png" extension to the end of a `File`.
 addPngExtension :: MonadThrow m => Path b File -> m (Path b File)
 addPngExtension = addExtension pngExtension
+
+-- | Add a ".svg" extension to the end of a `File`.
+addSvgExtension :: MonadThrow m => Path b File -> m (Path b File)
+addSvgExtension = addExtension svgExtension
 
 -- | Add a ".xml" extension to the end of a `File`.
 addXmlExtension :: MonadThrow m => Path b File -> m (Path b File)
@@ -211,7 +222,7 @@ withJpgExtension = replaceExtension jpgExtension
 withMdExtension :: MonadThrow m => Path b File -> m (Path b File)
 withMdExtension = replaceExtension mdExtension
 
--- | Replace the current extension of a `File` with a ".mp4" extension.
+-- | Replace the current extension of a `File` with a ".mp3" extension.
 withMp3Extension :: MonadThrow m => Path b File -> m (Path b File)
 withMp3Extension = replaceExtension mp3Extension
 
@@ -234,6 +245,10 @@ withPhpExtension = replaceExtension phpExtension
 -- | Replace the current extension of a `File` with a ".png" extension.
 withPngExtension :: MonadThrow m => Path b File -> m (Path b File)
 withPngExtension = replaceExtension pngExtension
+
+-- | Replace the current extension of a `File` with a ".svg" extension.
+withSvgExtension :: MonadThrow m => Path b File -> m (Path b File)
+withSvgExtension = replaceExtension svgExtension
 
 -- | Replace the current extension of a `File` with a ".xml" extension.
 withXmlExtension :: MonadThrow m => Path b File -> m (Path b File)
