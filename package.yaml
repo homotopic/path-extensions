@@ -17,6 +17,7 @@ description:         Enumeration of common filetype extensions for use with the 
 dependencies:
 - base >= 4.7 && < 5
 - exceptions
+- text
 - path
 
 library:

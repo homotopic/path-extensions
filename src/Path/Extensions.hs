@@ -1,22 +1,55 @@
 module Path.Extensions where
 
 import Control.Monad.Catch
+import Data.Text
 import Path
 
-cExtension    = ".c"
-cppExtension  = ".cpp"
+cExtension :: String
+cExtension = ".c"
+
+cppExtension :: String
+cppExtension = ".cpp"
+
+cssExtension :: String
 cssExtension  = ".css"
+
+gifExtension :: String
 gifExtension  = ".gif"
+
+hsExtension :: String
 hsExtension   = ".hs"
+
+htmlExtension :: String
 htmlExtension = ".html"
+
+jpgExtension :: String
 jpgExtension  = ".jpg"
+
+jsExtension :: String
 jsExtension   = ".js"
+
+mdExtension :: String
 mdExtension   = ".md"
+
+mp3Extension :: String
+mp3Extension  = ".mp3"
+
+mp4Extension :: String
 mp4Extension  = ".mp4"
+
+oExtension :: String
 oExtension    = ".o"
+
+pdfExtension :: String
 pdfExtension  = ".pdf"
+
+phpExtension :: String
 phpExtension  = ".php"
+
+pngExtension :: String
 pngExtension  = ".png"
+
+xmlExtension :: String
 xmlExtension  = ".xml"
 
 addCExtension :: MonadThrow m => Path b File -> m (Path b File)
