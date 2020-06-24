@@ -7,7 +7,7 @@ before_script:
 
 stages:
 - lint
-- test
+- build
 
 lint:
   stage: lint
