@@ -1,5 +1,5 @@
 name:                path-extensions
-version:             0.0.1.0
+version:             0.1.0.0
 license:             BSD3
 git:                 https://gitlab.com/homotopic-tech/path-extensions
 author:              "Daniel Firth"
@@ -18,7 +18,6 @@ description:         Enumeration of common filetype extensions for use with the 
 dependencies:
 - base >= 4.7 && < 5
 - exceptions
-- text
 - path
 
 library:
