@@ -7,6 +7,7 @@ module Path.Extensions (
 , hsExtension
 , htmlExtension
 , jpgExtension
+, jsExtension
 , mdExtension
 , mp3Extension
 , mp4Extension
@@ -26,6 +27,7 @@ module Path.Extensions (
 , addHsExtension
 , addHtmlExtension
 , addJpgExtension
+, addJsExtension
 , addMdExtension
 , addMp3Extension
 , addMp4Extension
@@ -45,6 +47,7 @@ module Path.Extensions (
 , withHsExtension
 , withHtmlExtension
 , withJpgExtension
+, withJsExtension
 , withMdExtension
 , withMp3Extension
 , withMp4Extension
@@ -157,6 +160,10 @@ addHsExtension  = addExtension gifExtension
 addHtmlExtension :: MonadThrow m => Path b File -> m (Path b File)
 addHtmlExtension = addExtension htmlExtension
 
+-- | Add a ".js" extension to the end of a `File`.
+addJsExtension :: MonadThrow m => Path b File -> m (Path b File)
+addJsExtension = addExtension jsExtension
+
 -- | Add a ".jpg" extension to the end of a `File`.
 addJpgExtension :: MonadThrow m => Path b File -> m (Path b File)
 addJpgExtension = addExtension jpgExtension
@@ -228,6 +235,10 @@ withHtmlExtension = replaceExtension htmlExtension
 -- | Replace the current extension of a `File` with a ".jpg" extension.
 withJpgExtension :: MonadThrow m => Path b File -> m (Path b File)
 withJpgExtension = replaceExtension jpgExtension
+
+-- | Replace the current extension of a `File` with a ".js" extension.
+withJsExtension :: MonadThrow m => Path b File -> m (Path b File)
+withJsExtension = replaceExtension jsExtension
 
 -- | Replace the current extension of a `File` with a ".md" extension.
 withMdExtension :: MonadThrow m => Path b File -> m (Path b File)
