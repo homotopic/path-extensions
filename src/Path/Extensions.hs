@@ -61,7 +61,6 @@ module Path.Extensions (
 ) where
 
 import           Control.Monad.Catch
-import           Data.Text
 import           Path
 
 -- | The string ".c".
