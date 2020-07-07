@@ -13,6 +13,7 @@ module Path.Extensions (
   cExtension
 , cppExtension
 , cssExtension
+, docxExtension
 , gifExtension
 , hsExtension
 , htmlExtension
@@ -22,18 +23,24 @@ module Path.Extensions (
 , mp3Extension
 , mp4Extension
 , oExtension
+, odtExtension
 , pdfExtension
 , phpExtension
 , pngExtension
 , pyExtension
+, rtfExtension
 , shExtension
 , svgExtension
+, texExtension
+, txtExtension
 , xmlExtension
+, wikiExtension
 
   -- * Add Extensions
 , addCExtension
 , addCppExtension
 , addCssExtension
+, addDocxExtension
 , addGifExtension
 , addHsExtension
 , addHtmlExtension
@@ -43,18 +50,24 @@ module Path.Extensions (
 , addMp3Extension
 , addMp4Extension
 , addOExtension
+, addOdtExtension
 , addPdfExtension
 , addPhpExtension
 , addPngExtension
 , addPyExtension
+, addRtfExtension
 , addShExtension
 , addSvgExtension
+, addTexExtension
+, addTxtExtension
 , addXmlExtension
+, addWikiExtension
 
   -- * Replace Extensions
 , withCExtension
 , withCppExtension
 , withCssExtension
+, withDocxExtension
 , withGifExtension
 , withHsExtension
 , withHtmlExtension
@@ -64,13 +77,18 @@ module Path.Extensions (
 , withMp3Extension
 , withMp4Extension
 , withOExtension
+, withOdtExtension
 , withPdfExtension
 , withPhpExtension
 , withPngExtension
 , withPyExtension
+, withRtfExtension
 , withShExtension
 , withSvgExtension
+, withTexExtension
+, withTxtExtension
 , withXmlExtension
+, withWikiExtension
 ) where
 
 import           Control.Monad.Catch
@@ -87,6 +105,10 @@ cppExtension = ".cpp"
 -- | The string ".css".
 cssExtension :: String
 cssExtension  = ".css"
+
+-- | The string ".docx"
+docxExtension :: String
+docxExtension = ".docx"
 
 -- | The string ".gif".
 gifExtension :: String
@@ -124,6 +146,10 @@ mp4Extension  = ".mp4"
 oExtension :: String
 oExtension    = ".o"
 
+-- | The string ".odt"
+odtExtension :: String
+odtExtension = ".odt"
+
 -- | The string ".pdf".
 pdfExtension :: String
 pdfExtension  = ".pdf"
@@ -140,6 +166,10 @@ pngExtension  = ".png"
 pyExtension :: String
 pyExtension = ".py"
 
+-- | The string ".rtf".
+rtfExtension :: String
+rtfExtension = ".rtf"
+
 -- | The string ".sh"
 shExtension :: String
 shExtension = ".sh"
@@ -148,9 +178,21 @@ shExtension = ".sh"
 svgExtension :: String
 svgExtension = ".svg"
 
+-- | The string ".tex"
+texExtension :: String
+texExtension = ".tex"
+
+-- | The string ".txt"
+txtExtension :: String
+txtExtension = ".txt"
+
 -- | The string ".xml".
 xmlExtension :: String
 xmlExtension  = ".xml"
+
+-- | The string ".wiki"
+wikiExtension :: String
+wikiExtension = ".wiki"
 
 -- | Add a ".c" extension to the end of a `File`.
 addCExtension :: MonadThrow m => Path b File -> m (Path b File)
@@ -164,13 +206,17 @@ addCppExtension = addExtension cppExtension
 addCssExtension :: MonadThrow m => Path b File -> m (Path b File)
 addCssExtension = addExtension cssExtension
 
+-- | Add a ".docx" extension to the end of a `File`.
+addDocxExtension :: MonadThrow m => Path b File -> m (Path b File)
+addDocxExtension = addExtension docxExtension
+
 -- | Add a ".gif" extension to the end of a `File`.
 addGifExtension :: MonadThrow m => Path b File -> m (Path b File)
-addGifExtension = addExtension cExtension
+addGifExtension = addExtension gifExtension
 
 -- | Add a ".hs" extension to the end of a `File`.
 addHsExtension :: MonadThrow m => Path b File -> m (Path b File)
-addHsExtension  = addExtension gifExtension
+addHsExtension  = addExtension hsExtension
 
 -- | Add a ".html" extension to the end of a `File`.
 addHtmlExtension :: MonadThrow m => Path b File -> m (Path b File)
@@ -200,6 +246,10 @@ addMp4Extension = addExtension mp4Extension
 addOExtension :: MonadThrow m => Path b File -> m (Path b File)
 addOExtension = addExtension oExtension
 
+-- | Add a ".odt" extension to the end of a `File`.
+addOdtExtension :: MonadThrow m => Path b File -> m (Path b File)
+addOdtExtension = addExtension odtExtension
+
 -- | Add a ".pdf" extension to the end of a `File`.
 addPdfExtension :: MonadThrow m => Path b File -> m (Path b File)
 addPdfExtension = addExtension pdfExtension
@@ -216,6 +266,10 @@ addPngExtension = addExtension pngExtension
 addPyExtension :: MonadThrow m => Path b File -> m (Path b File)
 addPyExtension = addExtension pyExtension
 
+-- | Add a ".rtf" extension to the end of a `File`.
+addRtfExtension :: MonadThrow m => Path b File -> m (Path b File)
+addRtfExtension = addExtension rtfExtension
+
 -- | Add a ".sh" extension to the end of a `File`.
 addShExtension :: MonadThrow m => Path b File -> m (Path b File)
 addShExtension = addExtension shExtension
@@ -224,9 +278,21 @@ addShExtension = addExtension shExtension
 addSvgExtension :: MonadThrow m => Path b File -> m (Path b File)
 addSvgExtension = addExtension svgExtension
 
+-- | Add a ".tex" extension to the end of a `File`.
+addTexExtension :: MonadThrow m => Path b File -> m (Path b File)
+addTexExtension = addExtension texExtension
+
+-- | Add a ".txt" extension to the end of a `File`.
+addTxtExtension :: MonadThrow m => Path b File -> m (Path b File)
+addTxtExtension = addExtension txtExtension
+
 -- | Add a ".xml" extension to the end of a `File`.
 addXmlExtension :: MonadThrow m => Path b File -> m (Path b File)
 addXmlExtension = addExtension xmlExtension
+
+-- | Add a ".wiki" extension to the end of a `File`.
+addWikiExtension :: MonadThrow m => Path b File -> m (Path b File)
+addWikiExtension = addExtension wikiExtension
 
 -- | Replace the current extension of a `File` with a ".c" extension.
 withCExtension :: MonadThrow m => Path b File -> m (Path b File)
@@ -239,6 +305,10 @@ withCppExtension = replaceExtension cppExtension
 -- | Replace the current extension of a `File` with a ".css" extension.
 withCssExtension :: MonadThrow m => Path b File -> m (Path b File)
 withCssExtension = replaceExtension cssExtension
+
+-- | Replace the current extension of a `File` with a ".docx" extension.
+withDocxExtension :: MonadThrow m => Path b File -> m (Path b File)
+withDocxExtension = replaceExtension docxExtension
 
 -- | Replace the current extension of a `File` with a ".gif" extension.
 withGifExtension :: MonadThrow m => Path b File -> m (Path b File)
@@ -276,6 +346,10 @@ withMp4Extension = replaceExtension mp4Extension
 withOExtension :: MonadThrow m => Path b File -> m (Path b File)
 withOExtension = replaceExtension oExtension
 
+-- | Replace the current extension of a `File` with a ".odt" extension.
+withOdtExtension :: MonadThrow m => Path b File -> m (Path b File)
+withOdtExtension = replaceExtension odtExtension
+
 -- | Replace the current extension of a `File` with a ".pdf" extension.
 withPdfExtension :: MonadThrow m => Path b File -> m (Path b File)
 withPdfExtension = replaceExtension pdfExtension
@@ -292,6 +366,10 @@ withPngExtension = replaceExtension pngExtension
 withPyExtension :: MonadThrow m => Path b File -> m (Path b File)
 withPyExtension = replaceExtension pyExtension
 
+-- | Replace the current extension of a `File` with a ".rtf" extension.
+withRtfExtension :: MonadThrow m => Path b File -> m (Path b File)
+withRtfExtension = replaceExtension rtfExtension
+
 -- | Replace the current extension of a `File` with a ".sh" extension.
 withShExtension :: MonadThrow m => Path b File -> m (Path b File)
 withShExtension = replaceExtension shExtension
@@ -300,6 +378,18 @@ withShExtension = replaceExtension shExtension
 withSvgExtension :: MonadThrow m => Path b File -> m (Path b File)
 withSvgExtension = replaceExtension svgExtension
 
+-- | Replace the current extension of a `File` with a ".tex" extension.
+withTexExtension :: MonadThrow m => Path b File -> m (Path b File)
+withTexExtension = replaceExtension texExtension
+
+-- | Replace the current extension of a `File` with a ".txt" extension.
+withTxtExtension :: MonadThrow m => Path b File -> m (Path b File)
+withTxtExtension = replaceExtension txtExtension
+
 -- | Replace the current extension of a `File` with a ".xml" extension.
 withXmlExtension :: MonadThrow m => Path b File -> m (Path b File)
 withXmlExtension = replaceExtension xmlExtension
+
+-- | Replace the current extension of a `File` with a ".wiki" extension.
+withWikiExtension :: MonadThrow m => Path b File -> m (Path b File)
+withWikiExtension = replaceExtension wikiExtension
