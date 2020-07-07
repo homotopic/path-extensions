@@ -26,6 +26,7 @@ module Path.Extensions (
 , phpExtension
 , pngExtension
 , pyExtension
+, shExtension
 , svgExtension
 , xmlExtension
 
@@ -46,6 +47,7 @@ module Path.Extensions (
 , addPhpExtension
 , addPngExtension
 , addPyExtension
+, addShExtension
 , addSvgExtension
 , addXmlExtension
 
@@ -66,6 +68,7 @@ module Path.Extensions (
 , withPhpExtension
 , withPngExtension
 , withPyExtension
+, withShExtension
 , withSvgExtension
 , withXmlExtension
 ) where
@@ -136,6 +139,10 @@ pngExtension  = ".png"
 -- | The string ".py".
 pyExtension :: String
 pyExtension = ".py"
+
+-- | The string ".sh"
+shExtension :: String
+shExtension = ".sh"
 
 -- | The string ".svg"
 svgExtension :: String
@@ -209,6 +216,10 @@ addPngExtension = addExtension pngExtension
 addPyExtension :: MonadThrow m => Path b File -> m (Path b File)
 addPyExtension = addExtension pyExtension
 
+-- | Add a ".sh" extension to the end of a `File`.
+addShExtension :: MonadThrow m => Path b File -> m (Path b File)
+addShExtension = addExtension shExtension
+
 -- | Add a ".svg" extension to the end of a `File`.
 addSvgExtension :: MonadThrow m => Path b File -> m (Path b File)
 addSvgExtension = addExtension svgExtension
@@ -280,6 +291,10 @@ withPngExtension = replaceExtension pngExtension
 -- | Replace the current extension of a `File` with a ".py" extension.
 withPyExtension :: MonadThrow m => Path b File -> m (Path b File)
 withPyExtension = replaceExtension pyExtension
+
+-- | Replace the current extension of a `File` with a ".sh" extension.
+withShExtension :: MonadThrow m => Path b File -> m (Path b File)
+withShExtension = replaceExtension shExtension
 
 -- | Replace the current extension of a `File` with a ".svg" extension.
 withSvgExtension :: MonadThrow m => Path b File -> m (Path b File)
