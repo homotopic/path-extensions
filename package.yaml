@@ -1,6 +1,6 @@
 name:                path-extensions
 version:             0.1.0.1
-license:             BSD3
+license:             MIT
 git:                 https://gitlab.com/homotopic-tech/path-extensions
 author:              "Daniel Firth"
 maintainer:          "dan.firth@homotopic.tech"
