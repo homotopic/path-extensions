@@ -1,5 +1,10 @@
 # Changelog for path-extensions
 
+## v0.1.1.0
+
+* Add docx, odt, rtf, sh, tex, txt and wiki extensions.
+* Fix error with gif and hs extensions.
+
 ## v0.1.0.0
 
 * Add docstrings.
