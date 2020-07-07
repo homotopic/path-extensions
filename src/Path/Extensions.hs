@@ -1,3 +1,13 @@
+{- |
+   Module     : Path.Extensions
+   Copyright  : Copyright (C) 2020 Daniel Firth
+   Maintainer : Daniel Firth <dan.firth@homotopic.tech
+   License    : MIT
+   Stability  : provisional
+
+Enumeration of file extensions for use with the Path library.
+-}
+
 module Path.Extensions (
   -- * Raw Extension Strings
   cExtension
