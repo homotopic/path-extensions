@@ -5,7 +5,7 @@ cabal-version: 1.12
 -- see: https://github.com/sol/hpack
 
 name:           path-extensions
-version:        0.1.1.0
+version:        0.1.1.1
 synopsis:       Enumeration of common filetype extensions for use with the path library.
 description:    Enumeration of common filetype extensions for use with the path library, add variants for adding an extension to a path and with variants for replacing an existing extension.
 category:       Filesystem
